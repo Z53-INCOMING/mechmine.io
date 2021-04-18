@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://images/white circle.png" type="Texture" id=1]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0.0075188, 0.496241, 0.800752, 1 )
+colors = PoolColorArray( 1, 0, 0, 1, 1, 0.84375, 0, 1, 1, 0.84375, 0, 1, 0, 0, 0, 0.529412 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="Curve" id=3]
+max_value = 4.0
+_data = [ Vector2( 0, 0.993875 ), 0.0, 0.0, 0, 0, Vector2( 0.767516, 1.02989 ), -0.00290216, 0.0, 0, 0, Vector2( 1, 4 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+curve = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+flag_disable_z = true
+direction = Vector3( -1, 0, 0 )
+spread = 11.51
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 40.7
+initial_velocity_random = 0.21
+angular_velocity = 167.44
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale_curve = SubResource( 4 )
+color_ramp = SubResource( 2 )
+
+[node name="fire" type="Particles2D"]
+light_mask = 2
+position = Vector2( 13.7174, 0.0345099 )
+emitting = false
+amount = 450
+lifetime = 3.0
+local_coords = false
+process_material = SubResource( 5 )
+texture = ExtResource( 1 )

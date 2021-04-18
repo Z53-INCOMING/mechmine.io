@@ -1,0 +1,5 @@
+[gd_resource type="NoiseTexture" format=2]
+
+[resource]
+width = 500
+height = 500

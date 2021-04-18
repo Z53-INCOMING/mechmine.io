@@ -1,0 +1,128 @@
+[gd_resource type="TileSet" load_steps=17 format=2]
+
+[ext_resource path="res://images/stones.png" type="Texture" id=1]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 0, 0, 50, 0, 50, 50, 0, 50 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=2]
+vertices = PoolVector2Array( 0, 0, 50, 0, 50, 50, 0, 50 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=3]
+vertices = PoolVector2Array( 0, 0, 50, 0, 50, 50, 0, 50 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=4]
+vertices = PoolVector2Array( 0, 0, 50, 0, 50, 50, 0, 50 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=5]
+vertices = PoolVector2Array( 0, 0, 50, 0, 50, 50, 0, 50 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=6]
+polygon = PoolVector2Array( 0.467949, 10.6555, 1.49605, 6.82349, 4.95422, 2.898, 7.85159, 0.748337, 40.9378, 0.374481, 44.0221, 2.05683, 46.7326, 4.86075, 49.443, 9.25355, 49.9103, 41.3116, 42.8071, 48.6953, 8.97316, 49.5365, 5.14114, 47.6672, 2.1503, 44.1155, 0.467949, 38.6946 )
+
+[sub_resource type="OccluderPolygon2D" id=7]
+polygon = PoolVector2Array( 0.667542, 9.13079, 1.97604, 6.13995, 5.62112, 2.30794, 9.92046, 0.158264, 38.8943, 0.0648041, 43.9413, 1.93408, 47.4929, 5.67263, 49.0818, 9.8785, 49.4557, 41.002, 48.4276, 43.8993, 44.689, 47.5444, 40.0158, 49.7876, 9.5466, 49.6006, 6.27538, 48.4791, 1.97604, 43.8993, 0.200226, 39.4131 )
+
+[sub_resource type="OccluderPolygon2D" id=8]
+polygon = PoolVector2Array( 0.95668, 9.03733, 2.4521, 5.57917, 6.75145, 1.74715, 10.3031, 0.43866, 38.903, 0.251732, 44.0435, 1.93408, 48.1559, 6.60727, 49.6513, 10.6262, 49.4644, 40.1608, 47.969, 44.6471, 43.7631, 48.5725, 39.9311, 49.7876, 10.1161, 49.881, 6.28412, 48.5725, 2.4521, 44.9274, 0.395905, 40.815 )
+
+[sub_resource type="OccluderPolygon2D" id=9]
+polygon = PoolVector2Array( 0.492508, 11.3739, 1.42715, 7.16805, 3.76375, 3.89682, 7.22191, 1.46676, 10.2128, 0.158264, 38.9061, 0.0648041, 43.8597, 1.56023, 47.7852, 5.11185, 49.748, 10.3458, 49.748, 38.5719, 47.7852, 45.2078, 43.9532, 48.3856, 37.5977, 50, 9.5585, 49.7876, 5.91341, 48.1987, 1.70753, 43.7124, 0, 39.5065 )
+
+[sub_resource type="OccluderPolygon2D" id=10]
+polygon = PoolVector2Array( 0.304077, 10.0654, 1.7995, 7.07459, 6.56615, 2.02754, 10.6786, 0.158264, 38.7177, 0.43866, 43.4844, 1.56023, 48.6249, 6.23341, 49.653, 10.3458, 49.466, 40.2542, 48.1575, 44.5536, 43.5778, 48.666, 39.8393, 49.9745, 9.65045, 49.4137, 5.53804, 48.1987, 1.7995, 43.7124, 0.304077, 38.7588 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( 2.01601, 2.40363, 48.5296, 2.40363, 47.9482, 48.9172, 2.59743, 48.5296 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 1.63051, 2.01602, 48.9193, 1.4346, 48.1441, 48.142, 2.01813, 48.3358 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+points = PoolVector2Array( 2.02023, 2.01602, 48.34, 3.17886, 48.5338, 48.5296, 2.02023, 48.142 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+points = PoolVector2Array( 2.79758, 2.01602, 48.7298, 1.2408, 48.1483, 48.142, 3.96042, 47.3668 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PoolVector2Array( 2.02448, 1.6284, 48.1505, 2.01602, 47.7628, 47.9482, 2.9935, 48.5296 )
+
+[resource]
+0/name = "stones.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 259, 56 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 2, 0 )
+0/autotile/tile_size = Vector2( 50, 50 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [ Vector2( 0, 0 ), SubResource( 6 ), Vector2( 1, 0 ), SubResource( 7 ), Vector2( 2, 0 ), SubResource( 8 ), Vector2( 3, 0 ), SubResource( 9 ), Vector2( 4, 0 ), SubResource( 10 ) ]
+0/autotile/navpoly_map = [ Vector2( 0, 0 ), SubResource( 1 ), Vector2( 1, 0 ), SubResource( 2 ), Vector2( 2, 0 ), SubResource( 3 ), Vector2( 3, 0 ), SubResource( 4 ), Vector2( 4, 0 ), SubResource( 5 ) ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 11 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 13 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 3, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 14 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 4, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 15 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "stones.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 5, 8, 47, 21 )
+1/tile_mode = 2
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 32, 32 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
