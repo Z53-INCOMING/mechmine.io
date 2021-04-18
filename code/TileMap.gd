@@ -3,7 +3,7 @@ var food_scene = preload("res://scenes/food.tscn")
 var bat_scene = preload("res://scenes/bat.tscn")
 var coin_scene = preload("res://scenes/stat coin.tscn")
 var shelter_scene = preload("res://scenes/shelter.tscn")
-onready var mech = get_node("tank")
+onready var mech = get_node("player")
 
 var has_moved = false
 var positions = []

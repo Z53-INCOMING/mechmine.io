@@ -1,4 +1,5 @@
 extends KinematicBody2D
+class_name Mech
 
 onready var health_loss_particle = $"UI/health loss particle"
 onready var regen_timer = $"regen timer"
@@ -40,7 +41,7 @@ onready var excavator_evolution = $"UI/excavator evolution"
 onready var skin = $color/circle
 
 var team = ""
-var tank_type = "miner"
+var mech_type = "miner"
 
 var bullet_speed = 0
 var bullet_damage = 0
@@ -210,7 +211,7 @@ func _process(delta: float) -> void:
 			twin_miner_evolution.visible = true
 			back_miner_evolution.visible = true
 		if level == 20:
-			if tank_type == "back miner":
+			if mech_type == "back miner":
 				sniper_back_evolution.visible = true
 				gunner_back_evolution.visible = true
 				auto_miner_evolution.visible = true
@@ -219,10 +220,10 @@ func _process(delta: float) -> void:
 				quadro_dig_evolution.visible = true
 				auto_miner_evolution.visible = true
 		if level == 30:
-			if tank_type == "sniper back":
+			if mech_type == "sniper back":
 				rocketship_evolution.visible = true
 				twin_sniper_evolution.visible = true
-			if tank_type == "quadro dig":
+			if mech_type == "quadro dig":
 				excavator_evolution.visible = true
 			XP_label.visible = false
 			XP_bar.visible = false
@@ -281,7 +282,7 @@ func _on_twin_miner_evolution_button_down() -> void:
 	chisel2.position = Vector2(12.7, 12.3)
 	chisel2.visible = true
 	chisel2.rotation_degrees = 0
-	tank_type = "twin miner"
+	mech_type = "twin miner"
 func _on_back_miner_evolution_button_down() -> void:
 	twin_miner_evolution.visible = false
 	back_miner_evolution.visible = false
@@ -290,7 +291,7 @@ func _on_back_miner_evolution_button_down() -> void:
 	cannon1.visible = true
 	cannon1.position = Vector2(22.3, -0.4)
 	cannon1.scale.x = 1.3
-	tank_type = "back miner"
+	mech_type = "back miner"
 func _on_sniper_back_evolution_button_down() -> void:
 	sniper_back_evolution.visible = false
 	gunner_back_evolution.visible = false
@@ -301,7 +302,7 @@ func _on_sniper_back_evolution_button_down() -> void:
 	cannon1.speed = 1.3
 	cannon1.reload = 0.8
 	cannon1.damage = 1.6
-	tank_type = "sniper back"
+	mech_type = "sniper back"
 func _on_gunner_back_evolution_button_down() -> void:
 	sniper_back_evolution.visible = false
 	gunner_back_evolution.visible = false
@@ -311,7 +312,7 @@ func _on_gunner_back_evolution_button_down() -> void:
 	spread_cannon1.visible = true
 	spread_cannon1.rotation_degrees = 0
 	spread_cannon1.damage = 0.8
-	tank_type = "gunner back"
+	mech_type = "gunner back"
 	cannon1.visible = false
 func _on_auto_miner_evolution_button_down() -> void:
 	quadro_dig_evolution.visible = false
@@ -325,7 +326,7 @@ func _on_auto_miner_evolution_button_down() -> void:
 	auto_turret1.position = Vector2(-1.4, 27.5)
 	auto_turret1.rotation_degrees = 91
 	auto_turret1.scale = Vector2(1.4, 1.4)
-	tank_type = "auto miner"
+	mech_type = "auto miner"
 	cannon1.visible = false
 	chisel2.visible = false
 func _on_quadro_dig_evolution_button_down() -> void:
@@ -348,7 +349,7 @@ func _on_quadro_dig_evolution_button_down() -> void:
 	chisel4.rotation_degrees = -45
 	chisel1.position = Vector2(17.1, 16.4)
 	chisel1.rotation_degrees = 45
-	tank_type = "quadro dig"
+	mech_type = "quadro dig"
 func _on_teamwork_evolution_button_down() -> void:
 	quadro_dig_evolution.visible = false
 	teamwork_evolution.visible = false
@@ -359,7 +360,7 @@ func _on_teamwork_evolution_button_down() -> void:
 	cannon1.scale = Vector2(2, 1.3)
 	cannon1.reload = 1
 	cannon1.speed = 1
-	tank_type = "teamwork"
+	mech_type = "teamwork"
 func _on_rocketship_evolution_button_down() -> void:
 	twin_sniper_evolution.visible = false
 	rocketship_evolution.visible = false
@@ -377,7 +378,7 @@ func _on_rocketship_evolution_button_down() -> void:
 	chisel2.rotation_degrees = 90
 	thruster.force = 15
 	thruster.visible = true
-	tank_type = "rocketship"
+	mech_type = "rocketship"
 func _on_twin_sniper_evolution_button_down() -> void:
 	twin_sniper_evolution.visible = false
 	rocketship_evolution.visible = false
@@ -399,7 +400,7 @@ func _on_twin_sniper_evolution_button_down() -> void:
 	cannon1.damage = 1.3
 	cannon2.damage = 1.3
 	
-	tank_type = "twin sniper"
+	mech_type = "twin sniper"
 func _on_excavator_evolution_button_down() -> void:
 	excavator_evolution.visible = false
 	chisel3.visible = false
@@ -420,4 +421,4 @@ func _on_excavator_evolution_button_down() -> void:
 	spread_cannon2.spread = 45
 	cannon1.visible = false
 	thruster.visible = true
-	tank_type = "Excavator"
+	mech_type = "Excavator"

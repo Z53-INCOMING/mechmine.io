@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://images/square.png" type="Texture" id=1]
-[ext_resource path="res://scenes/mech.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/player mech.tscn" type="PackedScene" id=2]
 [ext_resource path="res://code/Area2D.gd" type="Script" id=3]
 [ext_resource path="res://scenes/food.tscn" type="PackedScene" id=4]
 [ext_resource path="res://code/Skip.gd" type="Script" id=5]
@@ -42,9 +42,10 @@ tile_data = PoolIntArray( -61276301, 0, 0, 0, 0, 2, 1, 0, 2, 2, 0, 2, 3, 0, 4, 4
 script = ExtResource( 11 )
 
 [node name="player" parent="TileMap" instance=ExtResource( 2 )]
-position = Vector2( 291.893, 1782.81 )
+position = Vector2( 290.752, 1782.53 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="TileMap/player"]
+position = Vector2( -0.0893555, -0.0280762 )
 remote_path = NodePath("../../../Camera")
 update_rotation = false
 update_scale = false
@@ -200,7 +201,7 @@ __meta__ = {
 }
 
 [node name="Camera" type="Camera2D" parent="."]
-position = Vector2( 291.893, 1782.81 )
+position = Vector2( 290.663, 1782.5 )
 z_index = 1
 current = true
 smoothing_enabled = true

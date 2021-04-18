@@ -8,9 +8,26 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Mech",
+"class": "EnemyMech",
+"language": "GDScript",
+"path": "res://scenes/enemy mech.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Mech",
+"language": "GDScript",
+"path": "res://code/mech.gd"
+}, {
+"base": "Mech",
+"class": "PlayerMech",
+"language": "GDScript",
+"path": "res://scenes/player mech.gd"
+} ]
 _global_script_class_icons={
-
+"EnemyMech": "",
+"Mech": "",
+"PlayerMech": ""
 }
 
 [application]
