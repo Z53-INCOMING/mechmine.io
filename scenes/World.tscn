@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://images/square.png" type="Texture" id=1]
 [ext_resource path="res://scenes/player mech.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://images/portal.png" type="Texture" id=12]
 [ext_resource path="res://resources/SkipButton.tres" type="StyleBox" id=13]
 [ext_resource path="res://resources/cave.tres" type="TileSet" id=14]
+[ext_resource path="res://scenes/Boulder.tscn" type="PackedScene" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 105.561, 49.7212 )
@@ -188,6 +189,9 @@ collision_mask = 0
 position = Vector2( -508.757, 1754.5 )
 shape = SubResource( 2 )
 
+[node name="Boulder" parent="TileMap" instance=ExtResource( 15 )]
+position = Vector2( -3345.63, -3011.37 )
+
 [node name="Label" type="Label" parent="."]
 margin_left = 258.018
 margin_top = 253.804
@@ -214,3 +218,4 @@ script = ExtResource( 6 )
 [connection signal="button_down" from="TileMap/Skip" to="TileMap/Skip" method="_on_Skip_button_down"]
 [connection signal="body_entered" from="TileMap/Skip/Area2D" to="TileMap/Skip/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="tutorial_complete" from="TileMap/Skip/Area2D" to="TileMap" method="_on_Area2D_tutorial_complete"]
+[connection signal="body_entered" from="TileMap/Boulder" to="." method="_on_Boulder_body_entered"]

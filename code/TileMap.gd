@@ -103,7 +103,7 @@ func _process(delta: float) -> void:
 
 
 func _on_Area2D_tutorial_complete() -> void:
-	mech.position = mech_position
+	mech.position = $Boulder.position
 	mech.food = 100
 	mech.speed = 0
 	mech.XP = 0

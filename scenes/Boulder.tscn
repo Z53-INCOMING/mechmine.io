@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://images/boulder.png" type="Texture" id=1]
+
+[node name="Boulder" type="RigidBody2D" groups=[
+"Boulder",
+]]
+light_mask = 0
+collision_layer = 16
+collision_mask = 19
+mass = 13.8714
+gravity_scale = 0.0
+linear_damp = 11.489
+angular_damp = 26.151
+
+[node name="image" type="Sprite" parent="."]
+light_mask = 0
+texture = ExtResource( 1 )
+
+[node name="hitbox" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -80.3289, 7.41201, -74.4353, -31.6034, -54.7786, -69.6117, -34.5247, -83.6364, -3.49162, -85.6506, 43.5059, -66.2548, 62.0521, -45.1897, 69.6157, -23.3602, 76.5161, 3.86855, 69.0562, 37.8112, 56.8219, 52.8057, 5.90793, 81.5264, -16.8448, 81.5264, -41.6491, 65.4875, -68.3183, 28.0014 )

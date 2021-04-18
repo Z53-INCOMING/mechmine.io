@@ -14,14 +14,14 @@
 [ext_resource path="res://mech icons/Excavator icon.png" type="Texture" id=12]
 [ext_resource path="res://mech icons/sniper back icon.png" type="Texture" id=13]
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.52549, 0.25098, 0, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.301961, 0.2, 0.133333, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
@@ -29,7 +29,7 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 1, 1, 1, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
@@ -37,7 +37,7 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.286275, 0.356863, 0.54902, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
@@ -45,7 +45,7 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 1.5, 0, 0, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
@@ -53,7 +53,7 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.745098, 0.117647, 0.117647, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
@@ -61,7 +61,7 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id=8]
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0, 1, 0.0745098, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
@@ -69,7 +69,7 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id=9]
+[sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.203922, 0.396078, 0.188235, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
@@ -77,14 +77,14 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id=10]
+[sub_resource type="StyleBoxFlat" id=9]
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 anti_aliasing = false
 
-[sub_resource type="ParticlesMaterial" id=11]
+[sub_resource type="ParticlesMaterial" id=10]
 flag_disable_z = true
 direction = Vector3( 0, -1, 0 )
 spread = 24.07
@@ -97,7 +97,7 @@ orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 scale = 18.44
 
-[sub_resource type="ParticlesMaterial" id=12]
+[sub_resource type="ParticlesMaterial" id=11]
 flag_disable_z = true
 spread = 180.0
 gravity = Vector3( 0, 0, 0 )
@@ -126,8 +126,8 @@ margin_left = -495.67
 margin_top = -283.0
 margin_right = -333.67
 margin_bottom = -269.0
-custom_styles/fg = SubResource( 2 )
-custom_styles/bg = SubResource( 3 )
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
 step = 1.0
 value = 50.0
 rounded = true
@@ -144,8 +144,8 @@ margin_top = 270.25
 margin_right = 467.906
 margin_bottom = 293.25
 rect_rotation = -359.999
-custom_styles/fg = SubResource( 4 )
-custom_styles/bg = SubResource( 5 )
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
 max_value = 10.0
 step = 1.0
 rounded = true
@@ -162,8 +162,8 @@ margin_top = 218.401
 margin_right = 467.705
 margin_bottom = 241.401
 rect_rotation = -359.999
-custom_styles/fg = SubResource( 4 )
-custom_styles/bg = SubResource( 5 )
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
 max_value = 10.0
 step = 1.0
 rounded = true
@@ -180,8 +180,8 @@ margin_top = 192.788
 margin_right = 467.402
 margin_bottom = 215.788
 rect_rotation = -359.999
-custom_styles/fg = SubResource( 4 )
-custom_styles/bg = SubResource( 5 )
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
 max_value = 10.0
 step = 1.0
 rounded = true
@@ -198,8 +198,8 @@ margin_top = 166.993
 margin_right = 467.475
 margin_bottom = 189.993
 rect_rotation = -359.999
-custom_styles/fg = SubResource( 4 )
-custom_styles/bg = SubResource( 5 )
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
 max_value = 10.0
 step = 1.0
 rounded = true
@@ -216,8 +216,8 @@ margin_top = 140.922
 margin_right = 467.921
 margin_bottom = 163.922
 rect_rotation = -359.999
-custom_styles/fg = SubResource( 4 )
-custom_styles/bg = SubResource( 5 )
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
 max_value = 10.0
 step = 1.0
 rounded = true
@@ -234,8 +234,8 @@ margin_top = 114.082
 margin_right = 468.094
 margin_bottom = 137.082
 rect_rotation = -359.999
-custom_styles/fg = SubResource( 4 )
-custom_styles/bg = SubResource( 5 )
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
 max_value = 10.0
 step = 1.0
 rounded = true
@@ -252,8 +252,8 @@ margin_top = 244.231
 margin_right = 467.724
 margin_bottom = 267.231
 rect_rotation = -359.999
-custom_styles/fg = SubResource( 4 )
-custom_styles/bg = SubResource( 5 )
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
 max_value = 10.0
 step = 1.0
 rounded = true
@@ -268,8 +268,8 @@ margin_left = -495.67
 margin_top = -262.8
 margin_right = -333.67
 margin_bottom = -248.8
-custom_styles/fg = SubResource( 6 )
-custom_styles/bg = SubResource( 7 )
+custom_styles/fg = SubResource( 5 )
+custom_styles/bg = SubResource( 6 )
 step = 1.0
 value = 50.0
 percent_visible = false
@@ -284,8 +284,8 @@ margin_top = 250.686
 margin_right = 9.19566
 margin_bottom = 264.686
 rect_scale = Vector2( 1.88, 1.88 )
-custom_styles/fg = SubResource( 8 )
-custom_styles/bg = SubResource( 9 )
+custom_styles/fg = SubResource( 7 )
+custom_styles/bg = SubResource( 8 )
 step = 1.0
 value = 11.0
 percent_visible = false
@@ -332,7 +332,7 @@ margin_left = 470.402
 margin_top = 114.0
 margin_right = 509.402
 margin_bottom = 137.0
-custom_styles/normal = SubResource( 10 )
+custom_styles/normal = SubResource( 9 )
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -344,7 +344,7 @@ margin_left = 470.741
 margin_top = 140.98
 margin_right = 509.741
 margin_bottom = 163.98
-custom_styles/normal = SubResource( 10 )
+custom_styles/normal = SubResource( 9 )
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -356,7 +356,7 @@ margin_left = 470.459
 margin_top = 167.327
 margin_right = 509.459
 margin_bottom = 190.327
-custom_styles/normal = SubResource( 10 )
+custom_styles/normal = SubResource( 9 )
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -368,7 +368,7 @@ margin_left = 470.362
 margin_top = 192.628
 margin_right = 509.362
 margin_bottom = 215.628
-custom_styles/normal = SubResource( 10 )
+custom_styles/normal = SubResource( 9 )
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -380,7 +380,7 @@ margin_left = 470.279
 margin_top = 218.873
 margin_right = 509.279
 margin_bottom = 241.873
-custom_styles/normal = SubResource( 10 )
+custom_styles/normal = SubResource( 9 )
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -392,7 +392,7 @@ margin_left = 470.612
 margin_top = 244.107
 margin_right = 509.612
 margin_bottom = 267.107
-custom_styles/normal = SubResource( 10 )
+custom_styles/normal = SubResource( 9 )
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -404,7 +404,7 @@ margin_left = 470.336
 margin_top = 269.977
 margin_right = 509.336
 margin_bottom = 292.977
-custom_styles/normal = SubResource( 10 )
+custom_styles/normal = SubResource( 9 )
 text = "+"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -438,7 +438,7 @@ amount = 6
 lifetime = 3.0
 one_shot = true
 explosiveness = 1.0
-process_material = SubResource( 11 )
+process_material = SubResource( 10 )
 
 [node name="twin miner evolution" type="Button" parent="UI" index="22"]
 visible = false
@@ -587,7 +587,7 @@ emitting = false
 amount = 13
 lifetime = 0.3
 explosiveness = 0.9
-process_material = SubResource( 12 )
+process_material = SubResource( 11 )
 [connection signal="button_down" from="UI/chisel speed button" to="." method="_on_chisel_speed_button_button_down"]
 [connection signal="button_down" from="UI/hunger endurance button" to="." method="_on_hunger_endurance_button_button_down"]
 [connection signal="button_down" from="UI/bullet reload button" to="." method="_on_bullet_reload_button_button_down"]
