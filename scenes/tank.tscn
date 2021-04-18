@@ -128,7 +128,6 @@ light_mask = 0
 position = Vector2( 0.402, 0 )
 collision_mask = 18
 script = ExtResource( 2 )
-hunger_speed = 2
 
 [node name="color" type="Node2D" parent="."]
 light_mask = 0
@@ -228,7 +227,7 @@ shape = SubResource( 1 )
 one_way_collision_margin = 0.0
 
 [node name="hunger timer" type="Timer" parent="."]
-wait_time = 2.5
+wait_time = 5.0
 autostart = true
 
 [node name="health timer" type="Timer" parent="."]
