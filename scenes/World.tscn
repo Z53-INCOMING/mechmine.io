@@ -214,6 +214,7 @@ script = ExtResource( 7 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 517.364, 300.651 )
 script = ExtResource( 6 )
+
 [connection signal="timeout" from="TileMap/Timer" to="TileMap" method="_on_Timer_timeout"]
 [connection signal="button_down" from="TileMap/Skip" to="TileMap/Skip" method="_on_Skip_button_down"]
 [connection signal="body_entered" from="TileMap/Skip/Area2D" to="TileMap/Skip/Area2D" method="_on_Area2D_body_entered"]

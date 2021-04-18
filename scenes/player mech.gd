@@ -45,13 +45,13 @@ func _process(delta: float) -> void:
 		food = food_bar.max_value
 	if XP >= XP_bar.max_value and XP_label.text != str(30):
 		XP = XP - XP_bar.max_value
-		
+
 		XP_bar.max_value *= 1.1
 		XP_bar.max_value = round(XP_bar.max_value)
 		level += 1
 		stat_coins += 1
 		$UI/Xp_particle.emitting = true
-		
+
 		if level == 10:
 			twin_miner_evolution.visible = true
 			back_miner_evolution.visible = true
@@ -72,7 +72,7 @@ func _process(delta: float) -> void:
 				excavator_evolution.visible = true
 			XP_label.visible = false
 			XP_bar.visible = false
-			
+
 func _on_health_timer_timeout() -> void:
 	._on_health_timer_timeout()
 	if food <= 0:
