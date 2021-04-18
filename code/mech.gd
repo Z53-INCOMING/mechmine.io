@@ -89,8 +89,8 @@ func _process(delta: float) -> void:
 	past_health = health
 	if Input.is_action_pressed("ui_accept"):
 		XP += 99
-	
-	
+
+
 	if Input.is_action_just_pressed("auto fire"):
 		auto_fire = !auto_fire
 		if !auto_fire:
@@ -99,26 +99,26 @@ func _process(delta: float) -> void:
 		auto_mine = !auto_mine
 	if Input.is_action_just_pressed("flip"):
 		flipped = !flipped
-	
+
 	var checky = true
 	var checkx = true
 	if Input.is_action_pressed("left"):
 		velocity.x -= speed * 10 + 60
-		
+
 		checkx = false
 	if Input.is_action_pressed("right"):
 		velocity.x += speed * 10 + 60
-		
+
 		checkx = false
 	if Input.is_action_pressed("up"):
 		velocity.y -= speed * 10 + 60
-		
+
 		checky = false
 	if Input.is_action_pressed("down"):
 		velocity.y += speed * 10 + 60
-		
+
 		checky = false
-	
+
 	if checkx:
 		velocity.x *= 0.9
 	if checky:
@@ -127,9 +127,9 @@ func _process(delta: float) -> void:
 	if flipped:
 		rotation_degrees = rotation_degrees - 180
 	skin.rotation = 0 - rotation
-	
-	
-	
+
+
+
 	if Input.is_action_pressed("mine") or auto_mine:
 		for chisel in get_tree().get_nodes_in_group("Chisels"):
 			if chisel.visible:
@@ -163,9 +163,16 @@ func _process(delta: float) -> void:
 		if mobility < abs(velocity.y):
 			velocity.y = sign(velocity.y) * mobility
 	velocity = move_and_slide(velocity, Vector2.UP, true, 4, 0, false)
-	
-	
-			
+
+func _physics_process(delta: float) -> void:
+	if velocity.length_squared() > 0:
+		for i in get_slide_count():
+			var collision = get_slide_collision(i)
+			var body := collision.collider as RigidBody2D
+			if body == null:
+				continue
+
+			body.apply_central_impulse(-collision.normal * 200)
 
 func _on_Timer_timeout() -> void:
 	food -= hunger_speed
@@ -188,7 +195,7 @@ func evolve_twin_miner() -> void:
 	chisel2.rotation_degrees = 0
 	mech_type = "twin miner"
 func evolve_back_miner() -> void:
-	
+
 	chisel1.position = Vector2(-19, 0)
 	chisel1.rotation_degrees = 176.5
 	cannon1.visible = true
@@ -204,7 +211,7 @@ func evolve_sniper_back() -> void:
 	cannon1.damage = 1.6
 	mech_type = "sniper back"
 func evolve_gunner_back() -> void:
-	
+
 	spread_cannon1.position = Vector2(24, -0.6)
 	spread_cannon1.reload = 1.4
 	spread_cannon1.visible = true
@@ -213,7 +220,7 @@ func evolve_gunner_back() -> void:
 	mech_type = "gunner back"
 	cannon1.visible = false
 func evolve_auto_miner() -> void:
-	
+
 	chisel1.position = Vector2(22.7, 0.4)
 	chisel1.rotation_degrees = 0
 	auto_turret1.visible = true
@@ -224,7 +231,7 @@ func evolve_auto_miner() -> void:
 	cannon1.visible = false
 	chisel2.visible = false
 func evolve_quadro_dig() -> void:
-	
+
 	chisel3.visible = true
 	chisel4.visible = true
 	cannon1.visible = true
@@ -243,7 +250,7 @@ func evolve_quadro_dig() -> void:
 	chisel1.rotation_degrees = 45
 	mech_type = "quadro dig"
 func evolve_teamwork() -> void:
-	
+
 	chisel2.visible = false
 	cannon1.visible = true
 	cannon1.position = Vector2(12.7, 14.2)
@@ -252,7 +259,7 @@ func evolve_teamwork() -> void:
 	cannon1.speed = 1
 	mech_type = "teamwork"
 func evolve_rocketship() -> void:
-	
+
 	cannon1.visible = true
 	cannon1.position = Vector2(16.4, -0.5)
 	cannon1.rotation = 0
@@ -269,7 +276,7 @@ func evolve_rocketship() -> void:
 	thruster.visible = true
 	mech_type = "rocketship"
 func evolve_twin_sniper() -> void:
-	
+
 	chisel1.position = Vector2(-19.5, 1.3)
 	chisel1.rotation_degrees = 180
 	chisel1.visible = true
@@ -287,10 +294,10 @@ func evolve_twin_sniper() -> void:
 	cannon2.visible = true
 	cannon1.damage = 1.3
 	cannon2.damage = 1.3
-	
+
 	mech_type = "twin sniper"
 func evolve_excavator() -> void:
-	
+
 	chisel3.visible = false
 	chisel4.visible = false
 	chisel2.visible = false
@@ -310,4 +317,4 @@ func evolve_excavator() -> void:
 	cannon1.visible = false
 	thruster.visible = true
 	mech_type = "Excavator"
-	
+
