@@ -433,7 +433,6 @@ __meta__ = {
 modulate = Color( 0, 1, 0.0941176, 1 )
 light_mask = 0
 position = Vector2( -3.94627, 216.046 )
-emitting = false
 amount = 6
 lifetime = 3.0
 one_shot = true
@@ -583,7 +582,6 @@ __meta__ = {
 [node name="health loss particle" type="Particles2D" parent="UI" index="32"]
 light_mask = 0
 position = Vector2( -497.64, -254.997 )
-emitting = false
 amount = 13
 lifetime = 0.3
 explosiveness = 0.9

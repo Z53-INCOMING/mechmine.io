@@ -17,12 +17,13 @@ func break_block():
 	timer.wait_time = (1.1 - (chisel_speed * 0.1)) / 2
 	if timer.time_left <= 0:
 		animation.play("chisel")
-		if raycastT.is_colliding():
-			raycast(raycastT)
-		if raycastM.is_colliding():
-			raycast(raycastM)
-		if raycastB.is_colliding():
-			raycast(raycastB)
+		for i in range(3):
+			if raycastT.is_colliding():
+				raycast(raycastT)
+			if raycastM.is_colliding():
+				raycast(raycastM)
+			if raycastB.is_colliding():
+				raycast(raycastB)
 		timer.start()
 func raycast(raycast_node):
 	var tileMapT := raycast_node.get_collider() as TileMap
