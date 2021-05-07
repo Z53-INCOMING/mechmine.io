@@ -1,7 +1,7 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://scenes/mech.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/player mech.gd" type="Script" id=2]
+[ext_resource path="res://code/player mech.gd" type="Script" id=2]
 [ext_resource path="res://mech icons/back miner icon.png" type="Texture" id=3]
 [ext_resource path="res://mech icons/gunner back icon.png" type="Texture" id=4]
 [ext_resource path="res://mech icons/auto miner icon.png" type="Texture" id=5]
@@ -13,6 +13,10 @@
 [ext_resource path="res://mech icons/rocket ship icon.png" type="Texture" id=11]
 [ext_resource path="res://mech icons/Excavator icon.png" type="Texture" id=12]
 [ext_resource path="res://mech icons/sniper back icon.png" type="Texture" id=13]
+[ext_resource path="res://images/pause.png" type="Texture" id=14]
+[ext_resource path="res://scenes/menu items.gd" type="Script" id=15]
+[ext_resource path="res://skins/mech.png" type="Texture" id=16]
+[ext_resource path="res://scenes/skins.gd" type="Script" id=17]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.52549, 0.25098, 0, 1 )
@@ -113,8 +117,16 @@ scale = 8.0
 scale_random = 0.57
 color = Color( 1, 0, 0, 1 )
 
+[sub_resource type="Theme" id=12]
+
 [node name="player mech" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+
+[node name="circle" parent="color" index="0"]
+texture = ExtResource( 16 )
+
+[node name="Light2D" parent="." index="5"]
+position = Vector2( 8.04663e-06, 0 )
 
 [node name="UI" type="CanvasLayer" parent="." index="6"]
 offset = Vector2( 512, 300 )
@@ -433,6 +445,7 @@ __meta__ = {
 modulate = Color( 0, 1, 0.0941176, 1 )
 light_mask = 0
 position = Vector2( -3.94627, 216.046 )
+emitting = false
 amount = 6
 lifetime = 3.0
 one_shot = true
@@ -586,6 +599,42 @@ amount = 13
 lifetime = 0.3
 explosiveness = 0.9
 process_material = SubResource( 11 )
+
+[node name="menu" type="Button" parent="UI" index="33"]
+margin_left = -511.0
+margin_top = 194.0
+margin_right = -399.0
+margin_bottom = 300.0
+icon = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu items" type="Node2D" parent="UI" index="34"]
+script = ExtResource( 15 )
+
+[node name="background" type="ColorRect" parent="UI/menu items" index="0"]
+margin_left = -123.0
+margin_top = -136.0
+margin_right = 116.0
+margin_bottom = 119.0
+theme = SubResource( 12 )
+color = Color( 0.341176, 0.341176, 0.341176, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="skins" type="Button" parent="UI/menu items" index="1"]
+margin_left = -111.0
+margin_top = -125.0
+margin_right = 102.0
+margin_bottom = -19.0
+text = "Mech"
+icon = ExtResource( 16 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="button_down" from="UI/chisel speed button" to="." method="_on_chisel_speed_button_button_down"]
 [connection signal="button_down" from="UI/hunger endurance button" to="." method="_on_hunger_endurance_button_button_down"]
 [connection signal="button_down" from="UI/bullet reload button" to="." method="_on_bullet_reload_button_button_down"]
@@ -603,3 +652,6 @@ process_material = SubResource( 11 )
 [connection signal="button_down" from="UI/twin sniper evolution" to="." method="_on_twin_sniper_evolution_button_down"]
 [connection signal="button_down" from="UI/rocketship evolution" to="." method="_on_rocketship_evolution_button_down"]
 [connection signal="button_down" from="UI/excavator evolution" to="." method="_on_excavator_evolution_button_down"]
+[connection signal="button_down" from="UI/menu" to="UI/menu items" method="_on_menu_button_down"]
+[connection signal="toggled" from="UI/menu" to="UI/menu items" method="_on_menu_toggled"]
+[connection signal="button_down" from="UI/menu items/skins" to="UI/menu items/skins" method="_on_skins_button_down"]

@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Mech",
 "class": "EnemyMech",
 "language": "GDScript",
-"path": "res://scenes/enemy mech.gd"
+"path": "res://code/enemy mech.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "Mech",
@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "Mech",
 "class": "PlayerMech",
 "language": "GDScript",
-"path": "res://scenes/player mech.gd"
+"path": "res://code/player mech.gd"
 } ]
 _global_script_class_icons={
 "EnemyMech": "",

@@ -25,8 +25,10 @@ onready var teamwork_evolution = $"UI/teamwork evolution"
 onready var twin_sniper_evolution = $"UI/twin sniper evolution"
 onready var rocketship_evolution = $"UI/rocketship evolution"
 onready var excavator_evolution = $"UI/excavator evolution"
+onready var skins = $"UI/menu items/skins"
 
 func _process(delta: float) -> void:
+	skin.texture = skins.skin
 	max_health_bar.value = max_health
 	bullet_speed_bar.value = bullet_speed
 	bullet_damage_bar.value = bullet_damage

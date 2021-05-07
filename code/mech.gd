@@ -41,17 +41,7 @@ var auto_mine = false
 var velocity = Vector2.ZERO
 var flipped = false
 
-var skin_default = preload("res://skins/tank.png")
-var skin_cloudy = preload("res://skins/cloudy tank skin.png")
-var skin_cracked = preload("res://skins/cracked tank skin.png")
-var skin_strike = preload("res://skins/strike tank skin.png")
-var skin_angry_dude = preload("res://skins/angry dude skin.png")
-var skin_zebra = preload("res://skins/zebra skin.png")
-var skin_pizza = preload("res://skins/pizza skin.png")
-var skin_missile = preload("res://skins/missile skin.png")
-var skin_Z53_fan = preload("res://skins/Z53 fan skin.png")
-var skin_team_support = preload("res://skins/team support skin.png")
-var skin_sorry_not_sorry = preload("res://skins/sorry not sorry skin.png")
+
 
 export var hunger_speed = 1
 
@@ -68,7 +58,6 @@ func evaluate_color():
 		art.modulate = Color(0.2, 0.2, 0.2)
 
 func _ready() -> void:
-#	skin.texture = skin_pizza
 	chisel1.position = Vector2(7.8, -18.4)
 	chisel1.rotation = 0
 	chisel1.visible = true
