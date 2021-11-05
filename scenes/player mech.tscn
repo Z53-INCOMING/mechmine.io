@@ -14,9 +14,9 @@
 [ext_resource path="res://mech icons/Excavator icon.png" type="Texture" id=12]
 [ext_resource path="res://mech icons/sniper back icon.png" type="Texture" id=13]
 [ext_resource path="res://images/pause.png" type="Texture" id=14]
-[ext_resource path="res://scenes/menu items.gd" type="Script" id=15]
+[ext_resource path="res://code/menu items.gd" type="Script" id=15]
 [ext_resource path="res://skins/mech.png" type="Texture" id=16]
-[ext_resource path="res://scenes/skins.gd" type="Script" id=17]
+[ext_resource path="res://code/skins.gd" type="Script" id=17]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.52549, 0.25098, 0, 1 )

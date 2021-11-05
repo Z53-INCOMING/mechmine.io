@@ -46,6 +46,69 @@ enabled = true
 cast_to = Vector2( 30, 0 )
 collision_mask = 2
 
+[node name="RayCast2DT2" type="RayCast2D" parent="."]
+light_mask = 0
+position = Vector2( 9.7738, -4.89804 )
+enabled = true
+cast_to = Vector2( 20.4, 0 )
+collision_mask = 2
+
+[node name="RayCast2DM2" type="RayCast2D" parent="."]
+light_mask = 0
+position = Vector2( 9.45088, -0.0717735 )
+enabled = true
+cast_to = Vector2( 20.4, 0 )
+collision_mask = 2
+
+[node name="RayCast2DB2" type="RayCast2D" parent="."]
+light_mask = 0
+position = Vector2( 9.66076, 5.09664 )
+enabled = true
+cast_to = Vector2( 20.4, 0 )
+collision_mask = 2
+
+[node name="RayCast2DT3" type="RayCast2D" parent="."]
+light_mask = 0
+position = Vector2( 21.4997, -4.72082 )
+enabled = true
+cast_to = Vector2( 8.8, 0 )
+collision_mask = 2
+
+[node name="RayCast2DM3" type="RayCast2D" parent="."]
+light_mask = 0
+position = Vector2( 21.1768, 0.105445 )
+enabled = true
+cast_to = Vector2( 8.8, 0 )
+collision_mask = 2
+
+[node name="RayCast2DB3" type="RayCast2D" parent="."]
+light_mask = 0
+position = Vector2( 21.3867, 5.27386 )
+enabled = true
+cast_to = Vector2( 8.8, 0 )
+collision_mask = 2
+
+[node name="RayCast2DT4" type="RayCast2D" parent="."]
+light_mask = 0
+position = Vector2( 29.2973, -4.83897 )
+enabled = true
+cast_to = Vector2( 1, 0 )
+collision_mask = 2
+
+[node name="RayCast2DM4" type="RayCast2D" parent="."]
+light_mask = 0
+position = Vector2( 28.9744, -0.0127001 )
+enabled = true
+cast_to = Vector2( 1, 0 )
+collision_mask = 2
+
+[node name="RayCast2DB4" type="RayCast2D" parent="."]
+light_mask = 0
+position = Vector2( 29.1843, 5.15571 )
+enabled = true
+cast_to = Vector2( 1, 0 )
+collision_mask = 2
+
 [node name="chisel" type="Sprite" parent="."]
 light_mask = 0
 position = Vector2( 15.6, 0.3 )

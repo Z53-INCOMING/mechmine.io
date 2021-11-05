@@ -32,7 +32,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="mechmine.io"
+config/name="mechmine"
 run/main_scene="res://scenes/World.tscn"
 config/icon="res://images/daimond.png"
 

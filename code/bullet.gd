@@ -1,5 +1,5 @@
 extends Area2D
-
+onready var player_mech = get_node("TileMap/player")
 var speed = Vector2.ZERO
 
 var bullet_damage = 0
